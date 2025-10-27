@@ -1,0 +1,16 @@
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\bin\Debug\net8.0\MeteoApp.Services.deps.json
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\bin\Debug\net8.0\MeteoApp.Services.dll
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\bin\Debug\net8.0\MeteoApp.Services.pdb
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\bin\Debug\net8.0\MeteoApp.Core.dll
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\bin\Debug\net8.0\MeteoApp.Core.pdb
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.AssemblyInfoInputs.cache
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.AssemblyInfo.cs
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.sourcelink.json
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.43B264FD.Up2Date
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.dll
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\refint\MeteoApp.Services.dll
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\MeteoApp.Services.pdb
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Services\obj\Debug\net8.0\ref\MeteoApp.Services.dll
