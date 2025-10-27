@@ -10,7 +10,7 @@ namespace MeteoApp.Core.Models
     public class MainData
     {
         [JsonPropertyName("temp")]
-        public double TemperatureActuelle { get; set; } // La View s'y lie
+        public double TemperatureActuelle { get; set; }
 
         [JsonPropertyName("feels_like")]
         public double TemperatureRessentie { get; set; }

@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Nouveau profil",
+    "Projects": [
+      {
+        "Path": "MeteoApp.WPF\\MeteoApp.WPF.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
