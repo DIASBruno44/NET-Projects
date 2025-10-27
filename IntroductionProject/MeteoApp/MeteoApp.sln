@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoApp.WPF", "MeteoApp.WPF\MeteoApp.WPF.csproj", "{21A7E277-A538-4019-AA67-4821CE74E7C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoApp.Core", "MeteoApp.Core\MeteoApp.Core.csproj", "{2349099A-7885-4A69-B051-37763F8F7BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoApp.Services", "MeteoApp.Services\MeteoApp.Services.csproj", "{D0E604B1-9014-4148-B4C9-0998999C4184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoApp.ViewModels", "MeteoApp.ViewModels\MeteoApp.ViewModels.csproj", "{FBF7B0CF-8425-4664-AE0D-7775A754B189}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21A7E277-A538-4019-AA67-4821CE74E7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A7E277-A538-4019-AA67-4821CE74E7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A7E277-A538-4019-AA67-4821CE74E7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A7E277-A538-4019-AA67-4821CE74E7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2349099A-7885-4A69-B051-37763F8F7BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2349099A-7885-4A69-B051-37763F8F7BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2349099A-7885-4A69-B051-37763F8F7BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2349099A-7885-4A69-B051-37763F8F7BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E604B1-9014-4148-B4C9-0998999C4184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E604B1-9014-4148-B4C9-0998999C4184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E604B1-9014-4148-B4C9-0998999C4184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E604B1-9014-4148-B4C9-0998999C4184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF7B0CF-8425-4664-AE0D-7775A754B189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF7B0CF-8425-4664-AE0D-7775A754B189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF7B0CF-8425-4664-AE0D-7775A754B189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF7B0CF-8425-4664-AE0D-7775A754B189}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
