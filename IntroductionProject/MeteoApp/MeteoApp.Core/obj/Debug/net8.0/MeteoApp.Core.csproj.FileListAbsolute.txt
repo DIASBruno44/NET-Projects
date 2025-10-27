@@ -10,3 +10,4 @@ C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\Met
 C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Core\obj\Debug\net8.0\refint\MeteoApp.Core.dll
 C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Core\obj\Debug\net8.0\MeteoApp.Core.pdb
 C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Core\obj\Debug\net8.0\ref\MeteoApp.Core.dll
+C:\Users\Utilisateur\Documents\NET_Projects\NET-Projects\IntroductionProject\MeteoApp\MeteoApp.Core\obj\Debug\net8.0\MeteoApp.Core.csproj.AssemblyReference.cache

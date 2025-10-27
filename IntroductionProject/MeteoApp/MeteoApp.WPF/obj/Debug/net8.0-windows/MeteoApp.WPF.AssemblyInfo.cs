@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("00d8c553-f712-45a6-9f3b-747440a09615")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7a03d87d0d9f4c41a3881e2f333ac7a5f76f7e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3eaa763b999e797f597eeb818fd999e871c601dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

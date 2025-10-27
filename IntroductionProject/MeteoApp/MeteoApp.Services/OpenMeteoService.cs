@@ -3,17 +3,25 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 
 namespace MeteoApp.Services
 {
     public class OpenMeteoService : IMeteoServices
     {
-        // 🚨 REMPLACER CES VALEURS 🚨
-        private const string API_KEY = "8dc5be287e63a1a0b68ef5c9d3343d26";
+        private readonly string _apiKey; 
         private const string BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
         // HttpClient doit être réutilisé pour une bonne gestion des ressources.
         private readonly HttpClient _httpClient = new HttpClient();
+
+        // Le service demande IConfiguration par DI
+        public OpenMeteoService(IConfiguration configuration)
+        {
+            // Lecture de la clé à partir de la section 'OpenWeatherMap:ApiKey' dans secrets.json
+            _apiKey = configuration["OpenWeatherMap:ApiKey"]
+                      ?? throw new InvalidOperationException("Clé API OWM introuvable dans la configuration.");
+        }
 
         public async Task<MeteoJour> GetMeteoAsync(string nomVille)
         {
@@ -23,7 +31,7 @@ namespace MeteoApp.Services
             }
 
             // Construction de l'URL avec les paramètres : Ville, Clé, et Unités (metric = Celsius)
-            string url = $"{BASE_URL}?q={nomVille}&appid={API_KEY}&units=metric&lang=fr";
+            string url = $"{BASE_URL}?q={nomVille}&appid={_apiKey}&units=metric&lang=fr";
 
             try
             {

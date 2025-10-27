@@ -3,6 +3,7 @@ using Microsoft.Extensions.Hosting;
 using System.Windows;
 using MeteoApp.Services;
 using MeteoApp.ViewModels;
+using Microsoft.Extensions.Configuration;
 
 namespace MeteoApp.WPF
 {
@@ -17,6 +18,11 @@ namespace MeteoApp.WPF
         {
             // Configure l'hôte et tous les services (DI)
             _host = Host.CreateDefaultBuilder()
+                .ConfigureAppConfiguration((context, config) =>
+                {
+                    // Ajout du support des secrets utilisateur pour le mode développement
+                    config.AddUserSecrets<App>();
+                })
                 .ConfigureServices((context, services) =>
                 {
                     // 1. Enregistrement des Services (Contrat vers Implémentation)

@@ -9,6 +9,8 @@
       "MeteoApp.WPF/1.0.0": {
         "dependencies": {
           "MeteoApp.ViewModels": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "9.0.10",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.10",
           "Microsoft.Extensions.DependencyInjection": "9.0.10",
           "Microsoft.Extensions.Hosting": "9.0.10"
         },
@@ -458,6 +460,10 @@
         }
       },
       "MeteoApp.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Json": "9.0.10",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.10"
+        },
         "runtime": {
           "MeteoApp.Core.dll": {
             "assemblyVersion": "1.0.0",
@@ -468,6 +474,8 @@
       "MeteoApp.Services/1.0.0": {
         "dependencies": {
           "MeteoApp.Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "9.0.10",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.10",
           "System.Net.Http.Json": "9.0.10"
         },
         "runtime": {
@@ -480,7 +488,9 @@
       "MeteoApp.ViewModels/1.0.0": {
         "dependencies": {
           "MeteoApp.Core": "1.0.0",
-          "MeteoApp.Services": "1.0.0"
+          "MeteoApp.Services": "1.0.0",
+          "Microsoft.Extensions.Configuration.Json": "9.0.10",
+          "Microsoft.Extensions.Configuration.UserSecrets": "9.0.10"
         },
         "runtime": {
           "MeteoApp.ViewModels.dll": {
