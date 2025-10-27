@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MeteoApp.Core.Models
+namespace MeteoApp.ViewModels
 {
-    public class MeteoJour
+    internal class BaseViewModel
     {
     }
 }
