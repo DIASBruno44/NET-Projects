@@ -38,6 +38,23 @@ namespace MeteoApp.ViewModels
             set => SetProperty(ref _isBusy, value);
         }
 
+        // Vérification si des données on été trouvés/recherchées
+        private bool _hasMeteoData;
+        public bool HasMeteoData
+        {
+            get => _hasMeteoData;
+            set
+            {
+                // 1. Utilisez SetProperty pour mettre à jour la valeur et notifier le changement de HasMeteoData
+                if (SetProperty(ref _hasMeteoData, value))
+                {
+                    OnPropertyChanged(nameof(HasNoMeteoData));
+                }
+            }
+        }
+
+        public bool HasNoMeteoData => !HasMeteoData;
+
         // --- Commande liée au XAML (le Bouton) ---
 
         // La propriété que la View va binder (Command="{Binding RechercherMeteoCommand}")
@@ -72,6 +89,7 @@ namespace MeteoApp.ViewModels
                 }
 
                 MeteoDuJour = result; // Mise à jour des données (notifie la View)
+                HasMeteoData = (result != null);
             }
             catch (Exception ex)
             {
