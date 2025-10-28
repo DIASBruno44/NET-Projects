@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        
+        xmlns:conv="clr-namespace:MeteoApp.WPF.Converters"
         xmlns:vm="clr-namespace:MeteoApp.ViewModels;assembly=MeteoApp.ViewModels"
         
         mc:Ignorable="d"
@@ -12,6 +12,7 @@
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <conv:MeteoIconConverter x:Key="MeteoIconConverter"/>
     </Window.Resources>
 
     <Grid Margin="15">
@@ -35,7 +36,10 @@
         <StackPanel Grid.Row="2" Margin="0,15,0,0">
             <TextBlock Text="{Binding MeteoDuJour.NomVille}" 
                        FontSize="32" FontWeight="Bold" Foreground="#333"/>
-
+            <Image Height="100" Width="100" HorizontalAlignment="Left"
+                   Margin="0,0,0,10"
+                   Source="{Binding MeteoDuJour.Descriptions[0].IconeCode, 
+                                    Converter={StaticResource MeteoIconConverter}}"/>
             <TextBlock FontSize="72" FontWeight="Light" Margin="0,10,0,10" Foreground="#007ACC">
                 <Run Text="{Binding MeteoDuJour.DonnéesPrincipales.TemperatureActuelle, StringFormat=\{0:F1\}}"/>
                 <Run Text="°C"/>
