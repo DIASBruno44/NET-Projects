@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Threading.Tasks;
 using System;
 using System.Diagnostics;
+using System.Windows;
 
 namespace MeteoApp.ViewModels
 {
@@ -12,6 +13,10 @@ namespace MeteoApp.ViewModels
     {
         // Dépendance injectée : le contrat de service API
         private readonly IMeteoServices _meteoService;
+        private const int RefreshIntervalMinutes = 10;
+
+        // 🚨 NOUVEAU : Un drapeau pour contrôler l'arrêt de la boucle
+        private CancellationTokenSource _cancellationTokenSource;
 
         // --- Propriétés liées au XAML (la View) ---
 
@@ -68,7 +73,46 @@ namespace MeteoApp.ViewModels
             // Initialisation de la Commande avec la méthode d'exécution asynchrone
             // SimpleCommand attend une Action (synchrone), on l'encapsule dans Task.Run
             RechercherMeteoCommand = new SimpleCommand(() => Task.Run(async () => await ExecuteRechercherMeteoAsync()));
+
+            StartAutoRefresh();
         }
+        private void StartAutoRefresh()
+        {
+            // Annule la boucle précédente si elle existait
+            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource = new CancellationTokenSource();
+
+            // On lance la boucle sans bloquer le constructeur
+            Task.Run(() => AutoRefreshLoop(_cancellationTokenSource.Token));
+        }
+
+        private async Task AutoRefreshLoop(CancellationToken cancellationToken)
+        {
+            // Lance la première recherche immédiatement
+            await ExecuteRechercherMeteoAsync();
+
+            // Boucle infinie, vérifiée par le token d'annulation
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                // 1. Pause asynchrone non bloquante (la magie du Task.Delay)
+                await Task.Delay(TimeSpan.FromMinutes(RefreshIntervalMinutes), cancellationToken);
+
+                // Vérifie la demande d'annulation après la pause
+                if (cancellationToken.IsCancellationRequested) break;
+
+                // 2. Exécute la recherche si l'application n'est pas occupée
+                if (!IsBusy && !string.IsNullOrWhiteSpace(NomVille))
+                {
+                    await ExecuteRechercherMeteoAsync();
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            _cancellationTokenSource?.Cancel();
+        }
+
 
         // Logique d'exécution de la recherche, asynchrone pour ne pas bloquer l'UI
         private async Task ExecuteRechercherMeteoAsync()
