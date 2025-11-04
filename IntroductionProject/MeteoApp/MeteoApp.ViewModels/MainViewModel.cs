@@ -81,7 +81,7 @@ namespace MeteoApp.ViewModels
             // Initialisation de la Commande avec la méthode d'exécution asynchrone
             // SimpleCommand attend une Action (synchrone), on l'encapsule dans Task.Run
 
-            RechercherMeteoCommand = new SimpleCommand(() => Task.Run(async () => await ExecuteRechercherMeteoAsync()));
+            RechercherMeteoCommand = new AsyncCommand(ExecuteRechercherMeteoAsync); 
             StartAutoRefresh();
 
         }
