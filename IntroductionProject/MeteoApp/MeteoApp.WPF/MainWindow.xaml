@@ -42,19 +42,34 @@
         </Border>
 
         <StackPanel Grid.Row="1" Margin="0,15,0,0"
-                Visibility="{Binding HasMeteoData, Converter={StaticResource BooleanToVisibilityConverter}}">
+            Visibility="{Binding HasMeteoData, Converter={StaticResource BooleanToVisibilityConverter}}">
 
             <TextBlock Text="{Binding MeteoDuJour.NomVille}" FontSize="32" FontWeight="Bold" Foreground="#333"/>
 
             <Image Height="100" Width="100" HorizontalAlignment="Left" Margin="0,0,0,10"
-               Source="{Binding MeteoDuJour.Descriptions[0].IconeCode, Converter={StaticResource MeteoIconConverter}}"/>
+           Source="{Binding MeteoDuJour.Descriptions[0].IconeCode, Converter={StaticResource MeteoIconConverter}}"/>
 
             <TextBlock FontSize="72" FontWeight="Light" Margin="0,10,0,10" Foreground="#007ACC">
-            <Run Text="{Binding MeteoDuJour.DonnéesPrincipales.TemperatureActuelle, StringFormat=\{0:F1\}}"/>
-            <Run Text="°C"/>
+        <Run Text="{Binding MeteoDuJour.DonnéesPrincipales.TemperatureActuelle, StringFormat=\{0:F1\}}"/>
+        <Run Text="°C"/>
             </TextBlock>
 
             <TextBlock Text="{Binding MeteoDuJour.Descriptions[0].Description}" FontSize="20" FontStyle="Italic" Foreground="#666"/>
+
+            <Separator Margin="0,10"/>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock FontWeight="SemiBold" Text="Vent : "/>
+                <TextBlock Text="{Binding MeteoDuJour.Vent.Vitesse, StringFormat=\{0:F2\} m/s}"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock FontWeight="SemiBold" Text="Humidité : "/>
+                <TextBlock Text="{Binding MeteoDuJour.DonnéesPrincipales.Humidite, StringFormat=\{0\}%}"/>
+            </StackPanel>
+
+
+
         </StackPanel>
 
     </Grid>
