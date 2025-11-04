@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeteoApp.Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7918d3ec30f2707193acf6625e369edcdcc662cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+666501464da2d863c235f3a429427bf56aaa5336")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeteoApp.Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeteoApp.Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

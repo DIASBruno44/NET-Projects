@@ -20,5 +20,8 @@ namespace MeteoApp.Core.Models
 
         [JsonPropertyName("wind")]
         public VentData Vent { get; set; }
+
+        [JsonPropertyName("dt")]
+        public long Dt { get; set; }
     }
 }

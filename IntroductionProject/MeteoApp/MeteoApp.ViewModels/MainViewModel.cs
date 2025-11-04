@@ -65,7 +65,12 @@ namespace MeteoApp.ViewModels
                 }
             }
         }
-
+        private MeteoJour _nextDayMeteo;
+        public MeteoJour NextDayMeteo
+        {
+            get => _nextDayMeteo;
+            set => SetProperty(ref _nextDayMeteo, value);
+        }
         public bool HasNoMeteoData => !HasMeteoData;
 
         // --- Commande liée au XAML (le Bouton) ---
@@ -148,16 +153,17 @@ namespace MeteoApp.ViewModels
 
             IsBusy = true;
             MeteoDuJour = null;
-            ErrorMessage = null; // ⬅️ Réinitialise l'erreur avant la recherche
+            ErrorMessage = null;
+            NextDayMeteo = null;
 
 
             try
             {
                 var resultJour = await _meteoService.GetMeteoAsync(NomVille);
+                var previsionsResult = await _meteoService.GetPrevisionsAsync(NomVille);
 
                 if (resultJour == null)
                 {
-                    // 💡 Affichage de l'erreur à l'utilisateur via la propriété
                     ErrorMessage = $"Désolé, la ville '{NomVille}' est introuvable ou il y a eu une erreur de connexion.";
                     HasMeteoData = false;
                 }
@@ -167,7 +173,13 @@ namespace MeteoApp.ViewModels
                     HasMeteoData = true;
                 }
 
-                // ... (votre code pour les prévisions irait ici)
+                if (previsionsResult?.ListePrevisions != null)
+                {
+                    var demain = DateTime.Today.AddDays(1).Date;
+
+                    NextDayMeteo = previsionsResult.ListePrevisions
+                        .FirstOrDefault(p => DateTimeOffset.FromUnixTimeSeconds(p.Dt).Date == demain);
+                }
             }
             catch (Exception ex)
             {

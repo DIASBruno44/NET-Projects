@@ -11,6 +11,7 @@ namespace MeteoApp.Services
     {
         private readonly string _apiKey; 
         private const string BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
+        private const string PREVISION_URL = "https://api.openweathermap.org/data/2.5/forecast"; 
 
         // HttpClient doit être réutilisé pour une bonne gestion des ressources.
         private readonly HttpClient _httpClient = new HttpClient();
@@ -48,6 +49,27 @@ namespace MeteoApp.Services
                 return null;
             }
             // On pourrait ajouter d'autres catch pour la désérialisation ou autres.
+        }
+
+        public async Task<Previsions> GetPrevisionsAsync(string nomVille)
+        {
+            if (string.IsNullOrWhiteSpace(nomVille)) return null;
+
+            // Construction de l'URL pour la prévision (utilise 'forecast' au lieu de 'weather')
+            string url = $"{PREVISION_URL}?q={nomVille}&appid={_apiKey}&units=metric&lang=fr";
+
+            try
+            {
+                // Appel et désérialisation du JSON dans le conteneur Previsions
+                var previsionsData = await _httpClient.GetFromJsonAsync<Previsions>(url);
+                return previsionsData;
+            }
+            catch (Exception ex)
+            {
+                // Gère les erreurs de connexion ou de désérialisation
+                System.Diagnostics.Debug.WriteLine($"Erreur API prévisions pour {nomVille} : {ex.Message}");
+                return null;
+            }
         }
     }
 }
