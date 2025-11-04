@@ -15,8 +15,16 @@ namespace MeteoApp.ViewModels
         private readonly IMeteoServices _meteoService;
         private const int RefreshIntervalMinutes = 10;
 
-        // 🚨 NOUVEAU : Un drapeau pour contrôler l'arrêt de la boucle
+        //Un drapeau pour contrôler l'arrêt de la boucle
         private CancellationTokenSource _cancellationTokenSource;
+        public bool FirstAPI_Connceciton = false;
+
+        private string _errorMessage;
+        public string ErrorMessage
+        {
+            get => _errorMessage;
+            set => SetProperty(ref _errorMessage, value);
+        }
 
         // --- Propriétés liées au XAML (la View) ---
 
@@ -72,9 +80,10 @@ namespace MeteoApp.ViewModels
 
             // Initialisation de la Commande avec la méthode d'exécution asynchrone
             // SimpleCommand attend une Action (synchrone), on l'encapsule dans Task.Run
-            RechercherMeteoCommand = new SimpleCommand(() => Task.Run(async () => await ExecuteRechercherMeteoAsync()));
 
+            RechercherMeteoCommand = new SimpleCommand(() => Task.Run(async () => await ExecuteRechercherMeteoAsync()));
             StartAutoRefresh();
+
         }
         private void StartAutoRefresh()
         {
@@ -119,30 +128,60 @@ namespace MeteoApp.ViewModels
         {
             if (IsBusy) return;
 
-            IsBusy = true; // Début du chargement (mettra à jour l'UI)
+            if (!FirstAPI_Connceciton)
+            {
+                
+                ErrorMessage = "";
+                // On pourrait aussi notifier le XAML pour un rafraîchissement
+                OnPropertyChanged(nameof(ErrorMessage));
+                FirstAPI_Connceciton = true;
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(NomVille))
+            {
+                ErrorMessage = "Veuillez entrer le nom d'une ville.";
+                // On pourrait aussi notifier le XAML pour un rafraîchissement
+                OnPropertyChanged(nameof(ErrorMessage));
+                return;
+            }
+
+            IsBusy = true;
             MeteoDuJour = null;
+            ErrorMessage = null; // ⬅️ Réinitialise l'erreur avant la recherche
+
 
             try
             {
-                // Appel au service API
-                var result = await _meteoService.GetMeteoAsync(NomVille);
+                var resultJour = await _meteoService.GetMeteoAsync(NomVille);
 
-                if (result == null)
+                if (resultJour == null)
                 {
-                    Debug.WriteLine($"[Erreur Recherche] Météo pour '{NomVille}' introuvable.");
+                    // 💡 Affichage de l'erreur à l'utilisateur via la propriété
+                    ErrorMessage = $"Désolé, la ville '{NomVille}' est introuvable ou il y a eu une erreur de connexion.";
+                    HasMeteoData = false;
+                }
+                else
+                {
+                    MeteoDuJour = resultJour;
+                    HasMeteoData = true;
                 }
 
-                MeteoDuJour = result; // Mise à jour des données (notifie la View)
-                HasMeteoData = (result != null);
+                // ... (votre code pour les prévisions irait ici)
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"[Erreur Système] Une erreur est survenue : {ex.Message}");
+                // En cas d'exception système (ex: JSON mal formé)
+                ErrorMessage = "Une erreur système inattendue est survenue.";
+                System.Diagnostics.Debug.WriteLine($"[Erreur Système] : {ex.Message}");
             }
             finally
             {
-                IsBusy = false; // Fin du chargement (mettra à jour l'UI)
+                IsBusy = false;
             }
+            
+
+
         }
     }
 }
