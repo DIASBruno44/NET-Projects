@@ -46,7 +46,7 @@ namespace MeteoApp.WPF {
         /// </summary>
         [System.STAThreadAttribute()]
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "9.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "9.0.10.0")]
         public static void Main() {
             MeteoApp.WPF.App app = new MeteoApp.WPF.App();
             app.Run();

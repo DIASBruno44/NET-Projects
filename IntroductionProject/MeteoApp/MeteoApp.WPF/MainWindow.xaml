@@ -14,6 +14,7 @@
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         <conv:MeteoIconConverter x:Key="MeteoIconConverter"/>
         <conv:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+        <conv:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
     </Window.Resources>
 
     <Grid Margin="15">
@@ -25,8 +26,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,15">
-            <TextBox Text="{Binding NomVille, UpdateSourceTrigger=PropertyChanged}" Width="200" Padding="5" FontSize="14" />
-            <Button Content="Rechercher" Command="{Binding RechercherMeteoCommand}" Margin="10,0,0,0" Padding="10,0"/>
+
+            <TextBox Text="{Binding NomVille, UpdateSourceTrigger=PropertyChanged}" Width="200" Padding="5" FontSize="14" 
+             IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" />
+
+            <Button Content="Rechercher" Command="{Binding RechercherMeteoCommand}" Margin="10,0,0,0" Padding="10,0"
+            IsEnabled="{Binding IsBusy, Converter={StaticResource InverseBooleanConverter}}" />
+
         </StackPanel>
 
         <Border Grid.Row="1" Padding="20" BorderBrush="#DDD" BorderThickness="1" CornerRadius="5"
