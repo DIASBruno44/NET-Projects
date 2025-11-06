@@ -14,6 +14,16 @@ namespace MeteoApp.WPF
 
             // 💡 Définition du DataContext : le XAML peut maintenant "voir" le ViewModel
             DataContext = viewModel;
+            this.Closing += MainWindow_Closing;
+        }
+
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (this.DataContext is IDisposable disposableViewModel)
+            {
+                // Appel de la méthode Dispose() du MainViewModel
+                disposableViewModel.Dispose();
+            }
         }
     }
 }

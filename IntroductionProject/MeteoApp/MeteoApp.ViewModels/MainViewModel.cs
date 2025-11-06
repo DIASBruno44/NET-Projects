@@ -9,7 +9,7 @@ using System.Windows;
 
 namespace MeteoApp.ViewModels
 {
-    public class MainViewModel : BaseViewModel
+    public class MainViewModel : BaseViewModel, IDisposable
     {
         // Dépendance injectée : le contrat de service API
         private readonly IMeteoServices _meteoService;
@@ -25,6 +25,7 @@ namespace MeteoApp.ViewModels
             get => _errorMessage;
             set => SetProperty(ref _errorMessage, value);
         }
+        private bool _isDisposed = false;
 
         // --- Propriétés liées au XAML (la View) ---
 
@@ -121,10 +122,19 @@ namespace MeteoApp.ViewModels
                 }
             }
         }
-
         public void Dispose()
         {
+            // Empêcher l'exécution multiple
+            if (_isDisposed) return;
+
+            // On appelle Cancel() avant de disposer l'objet.
             _cancellationTokenSource?.Cancel();
+
+            // On laisse Dispose() faire le nettoyage
+            _cancellationTokenSource?.Dispose();
+
+            _isDisposed = true;
+
         }
 
 
