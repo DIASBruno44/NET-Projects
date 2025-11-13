@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|solutionrelative:meteoapp.viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -19,8 +11,24 @@
       "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\converters\\inversebooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.wpf\\converters\\nulltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\converters\\nulltovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|solutionrelative:meteoapp.viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.wpf\\converters\\booleantostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A7E277-A538-4019-AA67-4821CE74E7C3}|MeteoApp.WPF\\MeteoApp.WPF.csproj|solutionrelative:meteoapp.wpf\\converters\\booleantostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|solutionrelative:meteoapp.viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D0E604B1-9014-4148-B4C9-0998999C4184}|MeteoApp.Services\\MeteoApp.Services.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.services\\openmeteoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.viewmodels\\asynccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|solutionrelative:meteoapp.viewmodels\\asynccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF7B0CF-8425-4664-AE0D-7775A754B189}|MeteoApp.ViewModels\\MeteoApp.ViewModels.csproj|solutionrelative:meteoapp.viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5C8C6976-8CF9-46B3-B4ED-514C5379345A}|MeteoApp.Tests\\MeteoApp.Tests.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\introductionproject\\meteoapp\\meteoapp.tests\\mainviewmodeltests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,7 +112,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -116,32 +120,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "BooleanToStringConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\BooleanToStringConverter.cs",
+              "RelativeDocumentMoniker": "MeteoApp.WPF\\Converters\\BooleanToStringConverter.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\BooleanToStringConverter.cs",
+              "RelativeToolTip": "MeteoApp.WPF\\Converters\\BooleanToStringConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:34:49.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "MeteoApp.ViewModels\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "MeteoApp.ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAkwIQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAiwLYAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T08:38:45.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OpenMeteoService.cs",
-              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\OpenMeteoService.cs",
-              "RelativeDocumentMoniker": "MeteoApp.Services\\OpenMeteoService.cs",
-              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\OpenMeteoService.cs",
-              "RelativeToolTip": "MeteoApp.Services\\OpenMeteoService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA1wDUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T08:17:11.095Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\MainWindow.xaml",
@@ -153,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\MainWindow.xaml.cs",
@@ -166,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "NullToVisibilityConverter.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\NullToVisibilityConverter.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\Converters\\NullToVisibilityConverter.cs",
@@ -174,23 +179,25 @@
               "RelativeToolTip": "MeteoApp.WPF\\Converters\\NullToVisibilityConverter.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-04T13:13:45.009Z"
+              "WhenOpened": "2025-11-04T13:13:45.009Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "InverseBooleanConverter.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\InverseBooleanConverter.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\Converters\\InverseBooleanConverter.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\InverseBooleanConverter.cs",
               "RelativeToolTip": "MeteoApp.WPF\\Converters\\InverseBooleanConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T10:19:56.375Z"
+              "WhenOpened": "2025-11-06T10:19:56.375Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\AssemblyInfo.cs",
@@ -202,7 +209,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 6,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "MeteoApp.ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "MeteoApp.ViewModels\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T08:37:59.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OpenMeteoService.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\OpenMeteoService.cs",
+              "RelativeDocumentMoniker": "MeteoApp.Services\\OpenMeteoService.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\OpenMeteoService.cs",
+              "RelativeToolTip": "MeteoApp.Services\\OpenMeteoService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wDUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T08:17:11.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "MeteoIconConverter.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\Converters\\MeteoIconConverter.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\Converters\\MeteoIconConverter.cs",
@@ -214,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "IMeteoServices.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\IMeteoServices.cs",
               "RelativeDocumentMoniker": "MeteoApp.Services\\IMeteoServices.cs",
@@ -226,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Ville.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\Ville.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\Ville.cs",
@@ -238,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Previsions.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\Previsions.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\Previsions.cs",
@@ -250,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "MeteoApp.Tests.csproj",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Tests\\MeteoApp.Tests.csproj",
               "RelativeDocumentMoniker": "MeteoApp.Tests\\MeteoApp.Tests.csproj",
@@ -262,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MeteoJour.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\MeteoJour.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\MeteoJour.cs",
@@ -274,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "AsyncCommand.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\AsyncCommand.cs",
               "RelativeDocumentMoniker": "MeteoApp.ViewModels\\AsyncCommand.cs",
@@ -286,19 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "MeteoApp.ViewModels\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.ViewModels\\BaseViewModel.cs",
-              "RelativeToolTip": "MeteoApp.ViewModels\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T08:37:59.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MeteoApp.Services.csproj",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Services\\MeteoApp.Services.csproj",
               "RelativeDocumentMoniker": "MeteoApp.Services\\MeteoApp.Services.csproj",
@@ -310,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Microsoft.NET.Test.Sdk.Program.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\.nuget\\packages\\microsoft.net.test.sdk\\18.0.0\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.net.test.sdk\\18.0.0\\build\\net8.0\\Microsoft.NET.Test.Sdk.Program.cs",
@@ -322,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\AppData\\Roaming\\Microsoft\\UserSecrets\\00d8c553-f712-45a6-9f3b-747440a09615\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\00d8c553-f712-45a6-9f3b-747440a09615\\secrets.json",
@@ -334,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\App.xaml.cs",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\App.xaml.cs",
@@ -346,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.WPF\\App.xaml",
               "RelativeDocumentMoniker": "MeteoApp.WPF\\App.xaml",
@@ -358,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "VentData.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\VentData.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\VentData.cs",
@@ -370,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "MainViewModelTests.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Tests\\MainViewModelTests.cs",
               "RelativeDocumentMoniker": "MeteoApp.Tests\\MainViewModelTests.cs",
@@ -382,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "DescriptionMeteo.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\DescriptionMeteo.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\DescriptionMeteo.cs",
@@ -394,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MainData.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\Models\\MainData.cs",
               "RelativeDocumentMoniker": "MeteoApp.Core\\Models\\MainData.cs",
@@ -406,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "MeteoApp.Core.csproj",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\IntroductionProject\\MeteoApp\\MeteoApp.Core\\MeteoApp.Core.csproj",
               "RelativeDocumentMoniker": "MeteoApp.Core\\MeteoApp.Core.csproj",

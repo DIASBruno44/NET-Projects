@@ -30,6 +30,16 @@ namespace MeteoApp.ViewModels
         // --- Propriétés liées au XAML (la View) ---
 
         private string _nomVille = "";
+
+        // Date de la dernière MAJ
+
+        private DateTime _lastUpdated;
+        public DateTime LastUpdated
+        {
+            get => _lastUpdated;
+            set => SetProperty(ref _lastUpdated, value);
+        }
+
         // Utilisation du SetProperty pour notifier la View
         public string NomVille
         {
@@ -169,6 +179,8 @@ namespace MeteoApp.ViewModels
 
             try
             {
+                LastUpdated = DateTime.Now;
+                System.Diagnostics.Debug.WriteLine($"MAJ EFFFECCCTUUEEEEEEEEEEE : {LastUpdated}");
                 var resultJour = await _meteoService.GetMeteoAsync(NomVille);
                 var previsionsResult = await _meteoService.GetPrevisionsAsync(NomVille);
 
@@ -181,6 +193,7 @@ namespace MeteoApp.ViewModels
                 {
                     MeteoDuJour = resultJour;
                     HasMeteoData = true;
+
                 }
 
                 if (previsionsResult?.ListePrevisions != null)

@@ -15,6 +15,7 @@
         <conv:MeteoIconConverter x:Key="MeteoIconConverter"/>
         <conv:NullToVisibilityConverter x:Key="NullToVisibilityConverter"/>
         <conv:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+        <conv:BooleanToStringConverter x:Key="BooleanToStringConverter"/>
     </Window.Resources>
 
     <Grid Margin="15">
@@ -95,6 +96,23 @@
 
 
         </StackPanel>
+
+        <StatusBar Grid.Row="2" Background="#EEEEEE" BorderBrush="#CCCCCC" BorderThickness="0,1,0,0">
+
+            <StatusBarItem>
+                <TextBlock Text="{Binding IsBusy, 
+                          Converter={StaticResource BooleanToStringConverter}, 
+                          ConverterParameter='Chargement en cours...|Prêt'}" />
+            </StatusBarItem>
+
+            <StatusBarItem HorizontalAlignment="Right"  Visibility="{Binding HasMeteoData, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Dernière MAJ : "/>
+
+                    <TextBlock Text="{Binding LastUpdated, StringFormat='{}{0:dd/MM/yy HH:mm:ss}'}"/>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
 
     </Grid>
 </Window>
