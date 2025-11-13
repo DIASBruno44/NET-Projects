@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c92ab98bd839380657ed34e770590caebdf1f68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6138b1d8ac0aef5d14ebd957c8f63910dcc1f6da")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeteoApp.WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
