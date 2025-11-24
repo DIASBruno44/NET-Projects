@@ -1,0 +1,19 @@
+﻿using RecipeApi.Entities;
+
+namespace RecipeApi.Interfaces
+{
+    public interface IRecipeRepository
+    {
+        // Récupérer toutes les recettes
+        Task<IEnumerable<Recipe>> GetAllRecipesAsync();
+
+        // Récupérer une recette spécifique (avec ses ingrédients)
+        Task<Recipe?> GetRecipeByIdAsync(int id);
+
+        // Ajouter une recette
+        void AddRecipe(Recipe recipe);
+
+        // Sauvegarder les changements dans la DB
+        Task<bool> SaveChangesAsync();
+    }
+}

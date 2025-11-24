@@ -51,8 +51,7 @@
               "RelativeToolTip": "RecipeApi\\Data\\RecipeContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:10:54.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:10:54.485Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "RecipeApi\\Entities\\Ingredient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:09:59.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:09:59.676Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "RecipeApi\\Entities\\Recipe.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:09:40.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:09:40.504Z"
             }
           ]
         }
