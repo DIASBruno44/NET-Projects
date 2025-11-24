@@ -39,5 +39,11 @@ namespace RecipeApi.Repositories
             // Retourne true si au moins une modification a été appliquée
             return (await _context.SaveChangesAsync() >= 0);
         }
+
+        public void DeleteRecipe(Recipe recipe)
+        {
+            // EF Core marque l'entité comme "Deleted" dans le change tracker
+            _context.Recipes.Remove(recipe);
+        }
     }
 }

@@ -77,5 +77,68 @@ namespace RecipeApi.Controllers
             // 6. Renvoi de la réponse 201 Created avec l'URL de la nouvelle ressource (bonne pratique)
             return CreatedAtAction(nameof(GetRecipeById), new { id = createdRecipeDto.Id }, createdRecipeDto);
         }
+
+        [HttpPut("{id}")] // Répond à PUT avec l'ID dans l'URL
+        public async Task<ActionResult> UpdateRecipe(int id, RecipeUpdateDto recipeDto)
+        {
+            // 1. Validation automatique (titre, PrepTimeMinutes)
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // 2. Récupérer l'entité existante (avec ses ingrédients si nécessaire)
+            var recipeEntity = await _recipeRepository.GetRecipeByIdAsync(id);
+
+            // 3. Vérification : Si la ressource n'existe pas, renvoyer 404 Not Found
+            if (recipeEntity == null)
+            {
+                return NotFound();
+            }
+
+            // 4. Mapping DTO -> Entité (Mise à jour des champs de l'entité par AutoMapper)
+            // AutoMapper prend les valeurs du DTO et les copie sur l'entité existante
+            _mapper.Map(recipeDto, recipeEntity);
+
+            // 5. Sauvegarde des changements
+            var success = await _recipeRepository.SaveChangesAsync();
+
+            if (!success)
+            {
+                // Erreur 500 : Si la sauvegarde a échoué pour une raison DB
+                return StatusCode(500, "Échec de la sauvegarde des changements.");
+            }
+
+            // 6. Renvoi d'une réponse 204 No Content (bonne pratique REST pour un succès sans corps)
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")] // Répond à DELETE avec l'ID dans l'URL
+        public async Task<ActionResult> DeleteRecipe(int id)
+        {
+            // 1. Récupérer l'entité existante
+            var recipeEntity = await _recipeRepository.GetRecipeByIdAsync(id);
+
+            // 2. Vérification : Si la ressource n'existe pas
+            if (recipeEntity == null)
+            {
+                return NotFound(); // Renvoie 404 Not Found
+            }
+
+            // 3. Appel au Repository pour marquer l'entité pour la suppression
+            _recipeRepository.DeleteRecipe(recipeEntity);
+
+            // 4. Sauvegarde des changements dans la base de données
+            var success = await _recipeRepository.SaveChangesAsync();
+
+            if (!success)
+            {
+                // Erreur 500 si la DB a échoué la suppression
+                return StatusCode(500, "Échec de la suppression de la recette.");
+            }
+
+            // 5. Renvoi de la réponse 204 No Content (bonne pratique REST pour un succès de suppression)
+            return NoContent();
+        }
     }
 }

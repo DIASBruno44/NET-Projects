@@ -12,6 +12,8 @@ namespace RecipeApi.Profiles
             CreateMap<Recipe, RecipeSummaryDto>();
 
             CreateMap<RecipeCreateDto, Recipe>();
+
+            CreateMap<RecipeUpdateDto, Recipe>();
         }
     }
 }

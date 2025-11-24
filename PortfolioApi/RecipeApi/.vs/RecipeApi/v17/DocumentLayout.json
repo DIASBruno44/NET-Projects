@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\profiles\\recipeprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\profiles\\recipeprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\repositories\\reciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,12 +15,20 @@
       "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\interfaces\\ireciperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\dtos\\recipesummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\dtos\\recipesummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\profiles\\recipeprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\profiles\\recipeprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\dtos\\recipeupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\dtos\\recipeupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\dtos\\recipecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\dtos\\recipecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\dtos\\recipesummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\dtos\\recipesummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\data\\recipecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\data\\recipecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|solutionrelative:recipeapi\\controllers\\recipescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{943F2F17-D042-4E63-B162-A5860EF72DAE}|RecipeApi\\RecipeApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\portfolioapi\\recipeapi\\recipeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,21 +58,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RecipeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Repositories\\RecipeRepository.cs",
-              "RelativeDocumentMoniker": "RecipeApi\\Repositories\\RecipeRepository.cs",
-              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Repositories\\RecipeRepository.cs",
-              "RelativeToolTip": "RecipeApi\\Repositories\\RecipeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T07:19:25.003Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -77,14 +68,14 @@
               "RelativeDocumentMoniker": "RecipeApi\\Interfaces\\IRecipeRepository.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Interfaces\\IRecipeRepository.cs",
               "RelativeToolTip": "RecipeApi\\Interfaces\\IRecipeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T07:18:28.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "RecipeSummaryDto.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\DTOs\\RecipeSummaryDto.cs",
               "RelativeDocumentMoniker": "RecipeApi\\DTOs\\RecipeSummaryDto.cs",
@@ -92,12 +83,11 @@
               "RelativeToolTip": "RecipeApi\\DTOs\\RecipeSummaryDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T07:17:32.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T07:17:32.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Recipe.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Entities\\Recipe.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Entities\\Recipe.cs",
@@ -105,12 +95,11 @@
               "RelativeToolTip": "RecipeApi\\Entities\\Recipe.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:09:40.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:09:40.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "RecipeCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\DTOs\\RecipeCreateDto.cs",
               "RelativeDocumentMoniker": "RecipeApi\\DTOs\\RecipeCreateDto.cs",
@@ -123,20 +112,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "RecipesController.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Controllers\\RecipesController.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Controllers\\RecipesController.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Controllers\\RecipesController.cs",
               "RelativeToolTip": "RecipeApi\\Controllers\\RecipesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv3IAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T07:32:31.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "RecipeContext.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Data\\RecipeContext.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Data\\RecipeContext.cs",
@@ -144,12 +133,11 @@
               "RelativeToolTip": "RecipeApi\\Data\\RecipeContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:10:54.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:10:54.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Ingredient.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Entities\\Ingredient.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Entities\\Ingredient.cs",
@@ -157,25 +145,50 @@
               "RelativeToolTip": "RecipeApi\\Entities\\Ingredient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:09:59.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:09:59.676Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "RecipeProfiles.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Profiles\\RecipeProfiles.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Profiles\\RecipeProfiles.cs",
               "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Profiles\\RecipeProfiles.cs",
               "RelativeToolTip": "RecipeApi\\Profiles\\RecipeProfiles.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T07:37:29.57Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
+              "Title": "RecipeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Repositories\\RecipeRepository.cs",
+              "RelativeDocumentMoniker": "RecipeApi\\Repositories\\RecipeRepository.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Repositories\\RecipeRepository.cs",
+              "RelativeToolTip": "RecipeApi\\Repositories\\RecipeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T07:19:25.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecipeUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\DTOs\\RecipeUpdateDto.cs",
+              "RelativeDocumentMoniker": "RecipeApi\\DTOs\\RecipeUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\DTOs\\RecipeUpdateDto.cs",
+              "RelativeToolTip": "RecipeApi\\DTOs\\RecipeUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T08:46:44.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\Program.cs",
               "RelativeDocumentMoniker": "RecipeApi\\Program.cs",
@@ -183,12 +196,11 @@
               "RelativeToolTip": "RecipeApi\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T13:16:05.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T13:16:05.025Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\PortfolioApi\\RecipeApi\\RecipeApi\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "RecipeApi\\WeatherForecast.cs",
@@ -196,8 +208,7 @@
               "RelativeToolTip": "RecipeApi\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T07:30:58.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T07:30:58.484Z"
             }
           ]
         }

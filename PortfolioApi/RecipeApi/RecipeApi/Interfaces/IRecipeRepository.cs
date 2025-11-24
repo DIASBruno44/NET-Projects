@@ -15,5 +15,7 @@ namespace RecipeApi.Interfaces
 
         // Sauvegarder les changements dans la DB
         Task<bool> SaveChangesAsync();
+
+        void DeleteRecipe(Recipe recipe);
     }
 }
