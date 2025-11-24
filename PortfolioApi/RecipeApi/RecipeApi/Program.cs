@@ -13,11 +13,22 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddControllers();
 
 builder.Services.AddDbContext<RecipeContext>(opt =>
     opt.UseSqlite($"Data Source=Recipe.db"));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<RecipeContext>();
+
+
+    db.Database.EnsureCreated();
+
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
