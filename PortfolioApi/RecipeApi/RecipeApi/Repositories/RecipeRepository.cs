@@ -45,5 +45,25 @@ namespace RecipeApi.Repositories
             // EF Core marque l'entité comme "Deleted" dans le change tracker
             _context.Recipes.Remove(recipe);
         }
+
+        public async Task<Recipe?> GetRecipeWithIngredientsAsync(int recipeId)
+        {
+            // Il faut charger les ingrédients pour manipuler la liste
+            return await _context.Recipes
+                .Include(r => r.Ingredients)
+                .FirstOrDefaultAsync(r => r.Id == recipeId);
+        }
+
+        public async Task<Ingredient?> GetIngredientForRecipeAsync(int recipeId, int ingredientId)
+        {
+            // EF Core s'assure que l'ID de l'ingrédient et l'ID de la recette correspondent
+            return await _context.Ingredients
+                .FirstOrDefaultAsync(i => i.RecipeId == recipeId && i.Id == ingredientId);
+        }
+
+        public void DeleteIngredient(Ingredient ingredient)
+        {
+            _context.Ingredients.Remove(ingredient);
+        }
     }
 }

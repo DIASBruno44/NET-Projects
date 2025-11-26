@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "RecipeApi.DTOs.RecipeSummaryDto",
+        "Type": "RecipeApi.DTOs.RecipeDetailDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -102,6 +102,115 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "AddIngredientToRecipe",
+    "RelativePath": "api/Recipes/{recipeId}/ingredients",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredientDto",
+        "Type": "RecipeApi.DTOs.IngredientCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RecipeApi.DTOs.IngredientDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "GetIngredientForRecipe",
+    "RelativePath": "api/Recipes/{recipeId}/ingredients/{ingredientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RecipeApi.DTOs.IngredientDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "UpdateIngredient",
+    "RelativePath": "api/Recipes/{recipeId}/ingredients/{ingredientId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredientId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredientDto",
+        "Type": "RecipeApi.DTOs.IngredientUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "DeleteIngredient",
+    "RelativePath": "api/Recipes/{recipeId}/ingredients/{ingredientId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ingredientId",
         "Type": "System.Int32",
         "IsRequired": true
       }

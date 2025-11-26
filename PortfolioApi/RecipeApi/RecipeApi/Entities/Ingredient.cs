@@ -6,5 +6,7 @@
         public string Name { get; set; }
         public int RecipeId { get; set; } // Clé étrangère
         public Recipe Recipe { get; set; } // Relation
+        public string Quantity { get; set; }
+
     }
 }

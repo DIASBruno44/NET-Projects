@@ -14,6 +14,14 @@ namespace RecipeApi.Profiles
             CreateMap<RecipeCreateDto, Recipe>();
 
             CreateMap<RecipeUpdateDto, Recipe>();
+
+            CreateMap<Ingredient, IngredientDto>();
+
+            CreateMap<Recipe, RecipeDetailDto>();
+
+            CreateMap<IngredientCreateDto, Ingredient>();
+
+            CreateMap<IngredientUpdateDto, Ingredient>();
         }
     }
 }

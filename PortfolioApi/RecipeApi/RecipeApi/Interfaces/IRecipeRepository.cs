@@ -17,5 +17,11 @@ namespace RecipeApi.Interfaces
         Task<bool> SaveChangesAsync();
 
         void DeleteRecipe(Recipe recipe);
+
+        Task<Recipe?> GetRecipeWithIngredientsAsync(int recipeId);
+
+        Task<Ingredient?> GetIngredientForRecipeAsync(int recipeId, int ingredientId);
+
+        void DeleteIngredient(Ingredient ingredient);
     }
 }
