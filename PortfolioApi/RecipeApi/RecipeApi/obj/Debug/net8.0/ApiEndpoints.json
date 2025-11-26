@@ -35,7 +35,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "RecipeApi.DTOs.RecipeSummaryDto",
+        "Type": "RecipeApi.DTOs.RecipeDetailDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

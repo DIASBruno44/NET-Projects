@@ -11,249 +11,156 @@ namespace RecipeApi.Controllers
     [ApiController]
     public class RecipesController : ControllerBase
     {
-        private readonly IRecipeRepository _recipeRepository;
-        private readonly IMapper _mapper; // ⬅️ L'outil de conversion DTO/Entité
+        private readonly IRecipeService _recipeService;
 
-        // 💡 Constructeur : Injection des dépendances (Repository et Mapper)
-        public RecipesController(IRecipeRepository recipeRepository, IMapper mapper)
+        public RecipesController(IRecipeService recipeService) // ⬅️ UN SEUL ARGUMENT
         {
-            _recipeRepository = recipeRepository;
-            _mapper = mapper;
+            _recipeService = recipeService;
         }
 
-        [HttpGet] // Répond à GET /api/recipes
+        // -------------------------------------------------------------------
+        // 1. GET ALL
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<RecipeSummaryDto>>> GetRecipes()
         {
-            // 1. Appel au Repository (Accès à la DB)
-            var recipeEntities = await _recipeRepository.GetAllRecipesAsync();
-
-            // 2. Mapping Entité -> DTO (Conversion sécurisée)
-            var recipeDtos = _mapper.Map<IEnumerable<RecipeSummaryDto>>(recipeEntities);
-
-            // 3. Renvoi de la réponse HTTP 200 OK
-            return Ok(recipeDtos);
+            // Le contrôleur ne fait plus que déléguer l'appel au Service.
+            return Ok(await _recipeService.GetAllRecipesAsync());
         }
 
-        // Dans RecipesController.cs
-
-        [HttpGet("{id}")] // Répond à une requête GET avec un ID dans l'URL, ex: /api/recipes/5
-        public async Task<ActionResult<RecipeDetailDto>> GetRecipeById(int id) // ⬅️ Changement du type de retour
+        // -------------------------------------------------------------------
+        // 2. GET BY ID
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RecipeDetailDto>> GetRecipeById(int id)
         {
-            // 1. Récupération : Le Repository charge déjà les ingrédients (.Include())
-            var recipeEntity = await _recipeRepository.GetRecipeByIdAsync(id);
+            var recipeDto = await _recipeService.GetRecipeByIdAsync(id);
 
-            if (recipeEntity == null)
+            // Le Contrôleur gère la réponse HTTP NotFound
+            if (recipeDto == null)
             {
                 return NotFound();
             }
-
-            // 2. 🚨 Mapping vers le DTO Détaillé 🚨
-            var recipeDto = _mapper.Map<RecipeDetailDto>(recipeEntity);
-
-            // 3. Renvoi de la réponse 200 OK avec le DTO détaillé (avec la liste d'ingrédients)
             return Ok(recipeDto);
         }
 
-        [HttpGet("{recipeId}/ingredients/{ingredientId}")]
-        public async Task<ActionResult<IngredientDto>> GetIngredientForRecipe( int recipeId, int ingredientId)
+        // -------------------------------------------------------------------
+        // 3. POST (Création)
+        [HttpPost]
+        public async Task<ActionResult<RecipeDetailDto>> CreateRecipe([FromBody] RecipeCreateDto recipeDto)
         {
-            // 1. Appel au Repository (Vérifie l'existence et l'appartenance à la recette)
-            var ingredientEntity = await _recipeRepository.GetIngredientForRecipeAsync(recipeId, ingredientId);
-
-            // 2. Vérification
-            if (ingredientEntity == null)
-            {
-                return NotFound(); // Renvoie 404 Not Found
-            }
-
-            // 3. Mapping Entité -> DTO pour le renvoi
-            var ingredientDto = _mapper.Map<IngredientDto>(ingredientEntity);
-
-            // 4. Renvoi de la réponse 200 OK
-            return Ok(ingredientDto);
-        }
-
-        [HttpPost] // Répond à POST /api/recipes
-        public async Task<ActionResult<RecipeSummaryDto>> CreateRecipe([FromBody] RecipeCreateDto recipeDto)
-        {
-            // 💡 1. Validation automatique par ASP.NET Core
-            if (!ModelState.IsValid)
-            {
-                // Renvoie une erreur 400 Bad Request avec les détails de la validation.
-                return BadRequest(ModelState);
-            }
-
-            // 2. Mapping DTO -> Entité (Conversion pour la DB)
-            var recipeEntity = _mapper.Map<Recipe>(recipeDto);
-
-            // 3. Appel au Repository (Ajout de l'entité)
-            _recipeRepository.AddRecipe(recipeEntity);
-
-            // 4. Sauvegarde dans la base de données
-            await _recipeRepository.SaveChangesAsync();
-
-            // 5. Mapping de l'Entité Sauvegardée vers le DTO de résumé pour le retour
-            var createdRecipeDto = _mapper.Map<RecipeSummaryDto>(recipeEntity);
-
-            // 6. Renvoi de la réponse 201 Created avec l'URL de la nouvelle ressource (bonne pratique)
-            return CreatedAtAction(nameof(GetRecipeById), new { id = createdRecipeDto.Id }, createdRecipeDto);
-        }
-
-        [HttpPost("{recipeId}/ingredients")]
-        public async Task<ActionResult<IngredientDto>> AddIngredientToRecipe( int recipeId, IngredientCreateDto ingredientDto)
-        {
-            // 1. Validation
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            // 2. Récupération de la Recette mère (le Repository charge les ingrédients)
-            var recipeEntity = await _recipeRepository.GetRecipeWithIngredientsAsync(recipeId);
+            // Délégation au Service qui gère le mapping, l'ajout et la sauvegarde
+            var createdRecipeDto = await _recipeService.CreateRecipeAsync(recipeDto);
 
-            if (recipeEntity == null)
-            {
-                return NotFound(); // La recette mère n'existe pas
-            }
-
-            // 3. Mapping DTO -> Entité
-            var ingredientEntity = _mapper.Map<Ingredient>(ingredientDto);
-
-            // 4. Établir la relation (Ajout de l'ingrédient à la collection de la recette)
-            recipeEntity.Ingredients.Add(ingredientEntity);
-
-            // 5. Sauvegarde (EF Core insère le nouvel ingrédient et met à jour la clé étrangère)
-            await _recipeRepository.SaveChangesAsync();
-
-            // 6. Mapping de l'Entité Ingredient vers le DTO de sortie
-            var ingredientToReturn = _mapper.Map<IngredientDto>(ingredientEntity);
-
-            // 7. Réponse 201 Created (bonne pratique)
-            return CreatedAtAction( nameof(GetRecipeById), new { id = recipeId }, ingredientToReturn);
+            // Renvoi de la réponse 201 Created (Contrôleur seulement)
+            return CreatedAtAction(
+                nameof(GetRecipeById),
+                new { id = createdRecipeDto.Id },
+                createdRecipeDto);
         }
 
-        [HttpPut("{id}")] // Répond à PUT avec l'ID dans l'URL
+        // -------------------------------------------------------------------
+        // 4. PUT (Mise à Jour)
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateRecipe(int id, RecipeUpdateDto recipeDto)
         {
-            // 1. Validation automatique (titre, PrepTimeMinutes)
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            // 2. Récupérer l'entité existante (avec ses ingrédients si nécessaire)
-            var recipeEntity = await _recipeRepository.GetRecipeByIdAsync(id);
+            // Le Service vérifie l'existence, mappe, et sauvegarde.
+            var success = await _recipeService.UpdateRecipeAsync(id, recipeDto);
 
-            // 3. Vérification : Si la ressource n'existe pas, renvoyer 404 Not Found
-            if (recipeEntity == null)
+            if (!success)
             {
+                // Si le service retourne false, c'est que la recette n'existe pas ou la sauvegarde a échoué.
+                // Ici, nous supposons que le service renvoie false si l'entité n'est pas trouvée (404)
                 return NotFound();
             }
 
-            // 4. Mapping DTO -> Entité (Mise à jour des champs de l'entité par AutoMapper)
-            // AutoMapper prend les valeurs du DTO et les copie sur l'entité existante
-            _mapper.Map(recipeDto, recipeEntity);
-
-            // 5. Sauvegarde des changements
-            var success = await _recipeRepository.SaveChangesAsync();
-
-            if (!success)
-            {
-                // Erreur 500 : Si la sauvegarde a échoué pour une raison DB
-                return StatusCode(500, "Échec de la sauvegarde des changements.");
-            }
-
-            // 6. Renvoi d'une réponse 204 No Content (bonne pratique REST pour un succès sans corps)
+            // Réponse 204 No Content (Contrôleur seulement)
             return NoContent();
         }
 
-        [HttpPut("{recipeId}/ingredients/{ingredientId}")]
-        public async Task<ActionResult> UpdateIngredient( int recipeId, int ingredientId, IngredientUpdateDto ingredientDto)
-        {
-            // 1. Validation de l'entrée
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            // 2. Récupérer l'entité existante (en vérifiant qu'elle appartient à la recette)
-            var ingredientEntity = await _recipeRepository.GetIngredientForRecipeAsync(recipeId, ingredientId);
-
-            if (ingredientEntity == null)
-            {
-                return NotFound(); // Renvoie 404
-            }
-
-            // 3. Mapping DTO -> Entité (Copie des nouvelles valeurs sur l'entité existante)
-            // 💡 EF Core détecte les changements ici grâce à sa fonctionnalité de suivi
-            _mapper.Map(ingredientDto, ingredientEntity);
-
-            // 4. Sauvegarde des changements
-            var success = await _recipeRepository.SaveChangesAsync();
-
-            if (!success)
-            {
-                return StatusCode(500, "Échec de la mise à jour de l'ingrédient.");
-            }
-
-            // 5. Renvoi de la réponse 204 No Content (succès sans corps)
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")] // Répond à DELETE avec l'ID dans l'URL
+        // -------------------------------------------------------------------
+        // 5. DELETE
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteRecipe(int id)
         {
-            // 1. Récupérer l'entité existante
-            var recipeEntity = await _recipeRepository.GetRecipeByIdAsync(id);
-
-            // 2. Vérification : Si la ressource n'existe pas
-            if (recipeEntity == null)
-            {
-                return NotFound(); // Renvoie 404 Not Found
-            }
-
-            // 3. Appel au Repository pour marquer l'entité pour la suppression
-            _recipeRepository.DeleteRecipe(recipeEntity);
-
-            // 4. Sauvegarde des changements dans la base de données
-            var success = await _recipeRepository.SaveChangesAsync();
+            var success = await _recipeService.DeleteRecipeAsync(id);
 
             if (!success)
             {
-                // Erreur 500 si la DB a échoué la suppression
-                return StatusCode(500, "Échec de la suppression de la recette.");
+                // Si le service retourne false, soit 404, soit erreur 500
+                return StatusCode(500, "La suppression a échoué.");
             }
 
-            // 5. Renvoi de la réponse 204 No Content (bonne pratique REST pour un succès de suppression)
+            // Réponse 204 No Content
             return NoContent();
         }
 
+        // -------------------------------------------------------------------
+        // 6. POST INGRÉDIENT (Ajout)
+        [HttpPost("{recipeId}/ingredients")]
+        public async Task<ActionResult<IngredientDto>> AddIngredientToRecipe(int recipeId, IngredientCreateDto ingredientDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            // Le Service gère la récupération de la recette, le mapping, l'ajout et la sauvegarde.
+            var ingredientToReturn = await _recipeService.AddIngredientToRecipeAsync(recipeId, ingredientDto);
+
+            if (ingredientToReturn == null) return NotFound(); // Si la recette mère n'existe pas
+
+            // Réponse 201 Created
+            return CreatedAtAction(
+                nameof(GetRecipeById),
+                new { id = recipeId }, // Utilise l'ID de la recette parente
+                ingredientToReturn);
+        }
+
+        // -------------------------------------------------------------------
+        // 7. GET INGRÉDIENT (Détail)
+        [HttpGet("{recipeId}/ingredients/{ingredientId}")]
+        public async Task<ActionResult<IngredientDto>> GetIngredientForRecipe(int recipeId, int ingredientId)
+        {
+            // Le Service gère la récupération de l'entité et le mapping vers le DTO.
+            var ingredientDto = await _recipeService.GetIngredientForRecipeAsync(recipeId, ingredientId);
+
+            if (ingredientDto == null) return NotFound();
+
+            return Ok(ingredientDto);
+        }
+
+        // -------------------------------------------------------------------
+        // 8. PUT INGRÉDIENT (Mise à Jour)
+        [HttpPut("{recipeId}/ingredients/{ingredientId}")]
+        public async Task<ActionResult> UpdateIngredient(int recipeId, int ingredientId, IngredientUpdateDto ingredientDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            // Le Service gère la vérification d'existence, le mapping DTO->Entité, et la sauvegarde.
+            var success = await _recipeService.UpdateIngredientAsync(recipeId, ingredientId, ingredientDto);
+
+            if (!success) return NotFound(); // Si non trouvé ou échec de sauvegarde
+
+            return NoContent(); // Réponse 204 No Content
+        }
+
+        // -------------------------------------------------------------------
+        // 9. DELETE INGRÉDIENT (Suppression)
         [HttpDelete("{recipeId}/ingredients/{ingredientId}")]
         public async Task<ActionResult> DeleteIngredient(int recipeId, int ingredientId)
         {
-            // 1. Récupération et vérification de la propriété
-            var ingredientEntity = await _recipeRepository.GetIngredientForRecipeAsync(recipeId, ingredientId);
+            // Le Service gère la récupération de l'entité et l'appel à la suppression.
+            var success = await _recipeService.DeleteIngredientAsync(recipeId, ingredientId);
 
-            // 2. Vérification : Si l'ingrédient n'existe pas OU n'appartient pas à la recette
-            if (ingredientEntity == null)
-            {
-                return NotFound(); // Renvoie 404 Not Found
-            }
+            if (!success) return NotFound(); // Si l'ingrédient n'existait pas (404)
 
-            // 3. Appel au Repository pour marquer l'entité pour la suppression
-            _recipeRepository.DeleteIngredient(ingredientEntity);
-
-            // 4. Sauvegarde des changements
-            var success = await _recipeRepository.SaveChangesAsync();
-
-            if (!success)
-            {
-                return StatusCode(500, "Échec de la suppression de l'ingrédient.");
-            }
-
-            // 5. Renvoi de la réponse 204 No Content (succès de suppression sans corps)
-            return NoContent();
+            return NoContent(); // Réponse 204 No Content
         }
-
     }
 }

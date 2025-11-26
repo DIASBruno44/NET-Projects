@@ -4,6 +4,9 @@ using RecipeApi.Data;
 using RecipeApi.Interfaces;
 using RecipeApi.Repositories;
 
+using RecipeApi.Interfaces;
+using RecipeApi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,6 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
+builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddControllers();
 
