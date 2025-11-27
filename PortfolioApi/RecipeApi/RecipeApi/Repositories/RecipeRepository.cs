@@ -26,6 +26,7 @@ namespace RecipeApi.Repositories
             // Récupère la recette ET charge les ingrédients associés
             return await _context.Recipes
                 .Include(r => r.Ingredients)
+                .Include(r => r.InstructionSteps)
                 .FirstOrDefaultAsync(r => r.Id == id);
         }
 
@@ -64,6 +65,18 @@ namespace RecipeApi.Repositories
         public void DeleteIngredient(Ingredient ingredient)
         {
             _context.Ingredients.Remove(ingredient);
+        }
+        public async Task<InstructionStep?> GetInstructionStepForRecipeAsync(int recipeId, int stepId)
+        {
+            // Recherche l'étape en s'assurant que la clé étrangère (RecipeId) correspond
+            return await _context.InstructionSteps
+                .FirstOrDefaultAsync(i => i.RecipeId == recipeId && i.Id == stepId);
+        }
+
+        // Implémentation DeleteInstructionStep
+        public void DeleteInstructionStep(InstructionStep step)
+        {
+            _context.InstructionSteps.Remove(step);
         }
     }
 }

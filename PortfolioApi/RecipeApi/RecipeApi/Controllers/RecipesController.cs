@@ -162,5 +162,55 @@ namespace RecipeApi.Controllers
 
             return NoContent(); // Réponse 204 No Content
         }
+        // -------------------------------------------------------------------
+        // 10. POST /api/recipes/{recipeId}/instructions
+        [HttpPost("{recipeId}/instructions")]
+        public async Task<ActionResult<InstructionStepDto>> CreateInstructionStep( int recipeId, InstructionStepCreateDto stepDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            // Le Service gère la vérification de la recette parente et la sauvegarde.
+            var stepToReturn = await _recipeService.CreateInstructionStepAsync(recipeId, stepDto);
+
+            if (stepToReturn == null) return NotFound(); // Si la recette mère n'existe pas
+
+            // Réponse 201 Created (On utilise GetRecipeById car l'étape est une sous-ressource)
+            return CreatedAtAction(
+                nameof(GetRecipeById),
+                new { id = recipeId },
+                stepToReturn);
+        }
+        // -------------------------------------------------------------------
+        // 11. PUT /api/recipes/{recipeId}/instructions/{stepId}
+        [HttpPut("{recipeId}/instructions/{stepId}")]
+        public async Task<ActionResult> UpdateInstructionStep( int recipeId, int stepId, InstructionStepUpdateDto stepDto)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            // Le Service gère la récupération, le mapping DTO->Entité, et la sauvegarde.
+            var success = await _recipeService.UpdateInstructionStepAsync(recipeId, stepId, stepDto);
+
+            if (!success) return NotFound(); // Non trouvé ou échec de sauvegarde
+
+            // Réponse 204 No Content
+            return NoContent();
+        }
+        // -------------------------------------------------------------------
+        // 12. DELETE /api/recipes/{recipeId}/instructions/{stepId}
+        [HttpDelete("{recipeId}/instructions/{stepId}")]
+        public async Task<ActionResult> DeleteInstructionStep(int recipeId, int stepId)
+        {
+            // Le Service gère la récupération de l'entité et l'appel à la suppression.
+            var success = await _recipeService.DeleteInstructionStepAsync(recipeId, stepId);
+
+            if (!success)
+            {
+                // Si l'étape n'existait pas (404) ou si la suppression a échoué en DB
+                return NotFound();
+            }
+
+            // Réponse 204 No Content
+            return NoContent();
+        }
     }
 }

@@ -161,5 +161,57 @@ namespace RecipeApi.Services
             // 3. Sauvegarde des changements
             return await _repository.SaveChangesAsync();
         }
+
+        public async Task<InstructionStepDto?> CreateInstructionStepAsync(int recipeId, InstructionStepCreateDto stepDto)
+        {
+            // 1. Vérifier si la recette mère existe
+            var recipeEntity = await _repository.GetRecipeByIdAsync(recipeId);
+            if (recipeEntity == null) return null;
+
+            // 2. Mapping DTO -> Entité
+            var stepEntity = _mapper.Map<InstructionStep>(stepDto);
+
+            // 3. Établir la relation
+            recipeEntity.InstructionSteps.Add(stepEntity);
+
+            // 4. Sauvegarde
+            if (await _repository.SaveChangesAsync())
+            {
+                return _mapper.Map<InstructionStepDto>(stepEntity);
+            }
+            return null;
+        }
+
+        // Mise à jour d'une étape
+        public async Task<bool> UpdateInstructionStepAsync(int recipeId, int stepId, InstructionStepUpdateDto stepDto)
+        {
+            // 1. Récupération de l'entité (vérifie l'appartenance)
+            var stepEntity = await _repository.GetInstructionStepForRecipeAsync(recipeId, stepId);
+            if (stepEntity == null) return false;
+
+            // 2. Mapping DTO -> Entité (EF Core suit les changements)
+            _mapper.Map(stepDto, stepEntity);
+
+            // 3. Sauvegarde
+            return await _repository.SaveChangesAsync();
+        }
+
+        // Suppression d'une étape
+        public async Task<bool> DeleteInstructionStepAsync(int recipeId, int stepId)
+        {
+            // 1. Récupération de l'entité
+            var stepEntity = await _repository.GetInstructionStepForRecipeAsync(recipeId, stepId);
+
+            if (stepEntity == null)
+            {
+                return true; // Succès si l'étape n'existe déjà plus
+            }
+
+            // 2. Appel au Repository
+            _repository.DeleteInstructionStep(stepEntity);
+
+            // 3. Sauvegarde
+            return await _repository.SaveChangesAsync();
+        }
     }
 }

@@ -23,5 +23,8 @@ namespace RecipeApi.Interfaces
         Task<Ingredient?> GetIngredientForRecipeAsync(int recipeId, int ingredientId);
 
         void DeleteIngredient(Ingredient ingredient);
+
+        Task<InstructionStep?> GetInstructionStepForRecipeAsync(int recipeId, int stepId);
+        void DeleteInstructionStep(InstructionStep step);
     }
 }

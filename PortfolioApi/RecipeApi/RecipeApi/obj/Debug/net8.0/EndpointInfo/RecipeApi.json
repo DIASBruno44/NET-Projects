@@ -376,6 +376,146 @@
           }
         }
       }
+    },
+    "/api/Recipes/{recipeId}/instructions": {
+      "post": {
+        "tags": [
+          "Recipes"
+        ],
+        "parameters": [
+          {
+            "name": "recipeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepCreateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepCreateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepCreateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstructionStepDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstructionStepDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InstructionStepDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Recipes/{recipeId}/instructions/{stepId}": {
+      "put": {
+        "tags": [
+          "Recipes"
+        ],
+        "parameters": [
+          {
+            "name": "recipeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "stepId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InstructionStepUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Recipes"
+        ],
+        "parameters": [
+          {
+            "name": "recipeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "stepId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -436,6 +576,64 @@
         },
         "additionalProperties": false
       },
+      "InstructionStepCreateDto": {
+        "required": [
+          "order",
+          "stepDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "stepDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "order": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstructionStepDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "stepDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "InstructionStepUpdateDto": {
+        "required": [
+          "order",
+          "stepDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "stepDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "order": {
+            "maximum": 100,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "RecipeCreateDto": {
         "required": [
           "title"
@@ -471,10 +669,6 @@
             "type": "string",
             "nullable": true
           },
-          "instructions": {
-            "type": "string",
-            "nullable": true
-          },
           "prepTimeMinutes": {
             "type": "integer",
             "format": "int32"
@@ -483,6 +677,13 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/IngredientDto"
+            },
+            "nullable": true
+          },
+          "instructionSteps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstructionStepDto"
             },
             "nullable": true
           }

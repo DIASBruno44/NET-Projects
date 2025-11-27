@@ -216,5 +216,83 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "CreateInstructionStep",
+    "RelativePath": "api/Recipes/{recipeId}/instructions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "stepDto",
+        "Type": "RecipeApi.DTOs.InstructionStepCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RecipeApi.DTOs.InstructionStepDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "UpdateInstructionStep",
+    "RelativePath": "api/Recipes/{recipeId}/instructions/{stepId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "stepId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "stepDto",
+        "Type": "RecipeApi.DTOs.InstructionStepUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RecipeApi.Controllers.RecipesController",
+    "Method": "DeleteInstructionStep",
+    "RelativePath": "api/Recipes/{recipeId}/instructions/{stepId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "stepId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

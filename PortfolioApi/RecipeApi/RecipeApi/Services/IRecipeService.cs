@@ -30,5 +30,11 @@ namespace RecipeApi.Interfaces
 
         // Suppression d'un ingrédient
         Task<bool> DeleteIngredientAsync(int recipeId, int ingredientId);
+
+        Task<InstructionStepDto?> CreateInstructionStepAsync(int recipeId, InstructionStepCreateDto stepDto);
+
+        Task<bool> UpdateInstructionStepAsync(int recipeId, int stepId, InstructionStepUpdateDto stepDto);
+
+        Task<bool> DeleteInstructionStepAsync(int recipeId, int stepId);
     }
 }
