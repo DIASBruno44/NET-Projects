@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecurePostManagerApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eda507646489bd57909af8d83a0cb0a671bae756")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8f9fdc074b28ee717a98abf214ad8207502a2c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecurePostManagerApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecurePostManagerApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
