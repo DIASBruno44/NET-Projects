@@ -1,12 +1,216 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\services\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\data\\applicationdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|c:\\users\\utilisateur\\documents\\net_projects\\net-projects\\secureapi\\securepostmanagerapi\\securepostmanagerapi\\migrations\\20251216070555_identitysetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BB1BE5E-42FD-45C0-A28A-2040A2812437}|SecurePostManagerApi\\SecurePostManagerApi.csproj|solutionrelative:securepostmanagerapi\\migrations\\20251216070555_identitysetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SecurePostManagerApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T08:17:07.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Services\\TokenService.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:40:17.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Services\\ITokenService.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Services\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Services\\ITokenService.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Services\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:39:17.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:33:23.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:08:59.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Data\\ApplicationDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Data\\ApplicationDbContextFactory.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Data\\ApplicationDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:05:02.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Program.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Program.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T06:55:30.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\appsettings.json",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\appsettings.json",
+              "RelativeToolTip": "SecurePostManagerApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T06:55:03.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:07:33.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T06:52:14.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T06:53:36.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20251216070555_IdentitySetup.cs",
+              "DocumentMoniker": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Migrations\\20251216070555_IdentitySetup.cs",
+              "RelativeDocumentMoniker": "SecurePostManagerApi\\Migrations\\20251216070555_IdentitySetup.cs",
+              "ToolTip": "C:\\Users\\Utilisateur\\Documents\\NET_Projects\\NET-Projects\\SecureAPI\\SecurePostManagerApi\\SecurePostManagerApi\\Migrations\\20251216070555_IdentitySetup.cs",
+              "RelativeToolTip": "SecurePostManagerApi\\Migrations\\20251216070555_IdentitySetup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T07:05:56.009Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
